@@ -147,6 +147,276 @@
       "vendido": "false",
       "descricao": "Esse é um novo Teclado",
       "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": []
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "1599",
+      "vendido": "false",
+      "descricao": "Esse é um novo Smartphone",
+      "fotos": []
+    },
+    {
+      "id": "teclado",
+      "nome": "Teclado",
+      "usuario_id": "rafaelst2000@gmail.com",
+      "preco": "200",
+      "vendido": "false",
+      "descricao": "Esse é um novo Teclado",
+      "fotos": []
     }
   ]
 }
