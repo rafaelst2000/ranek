@@ -32,7 +32,8 @@ export default {
   },
   methods: {
     logar() {
-      console.log("aq")
+      this.$store.dispatch("getUsuario", this.login.email)
+      this.$router.push({ name: "usuario" })
     },
   },
 }

@@ -10,6 +10,17 @@
       "numero": "654",
       "estado": "RS",
       "cidade": "São Jerônimo"
+    },
+    {
+      "id": "rafaelst2@gmail.com",
+      "email": "rafaelst2@gmail.com",
+      "nome": "Trevizera",
+      "senha": "456",
+      "rua": "Rua do Coral",
+      "cep": "123456789",
+      "numero": "957",
+      "estado": "RS",
+      "cidade": "São Jerônimo"
     }
   ],
   "produto": [
