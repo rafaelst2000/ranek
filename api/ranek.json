@@ -21,6 +21,30 @@
       "numero": "957",
       "estado": "RS",
       "cidade": "São Jerônimo"
+    },
+    {
+      "id": "riven@leagueoflegends.com",
+      "nome": "Riven Broken Blade",
+      "email": "riven@leagueoflegends.com",
+      "senha": "123",
+      "cep": "96750000",
+      "rua": "Avenida 1",
+      "numero": "123",
+      "bairro": "Centro",
+      "cidade": "Butiá",
+      "estado": "RS"
+    },
+    {
+      "id": "patrickstar@gmail.com",
+      "nome": "Patrick Estrela",
+      "email": "patrickstar@gmail.com",
+      "senha": "123",
+      "cep": "69906466",
+      "rua": "Rua Santo Antônio",
+      "numero": "123",
+      "bairro": "Taquarí",
+      "cidade": "Rio Branco",
+      "estado": "AC"
     }
   ],
   "produto": [
