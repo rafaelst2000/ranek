@@ -1,9 +1,32 @@
 <template>
-  <p>editar</p>
+  <section>
+    <UsuarioForm>
+      <button class="btn" @click.prevent="atualizarUsuario">Atualizar Usuario</button>
+    </UsuarioForm>
+  </section>
 </template>
 
 <script>
-export default {}
+import { api } from "@/services/services.js"
+import UsuarioForm from "@/components/UsuarioForm.vue"
+export default {
+  components: {
+    UsuarioForm,
+  },
+  methods: {
+    atualizarUsuario() {
+      api
+        .put(`/usuario/${this.$store.state.usuario.id}`, this.$store.state.usuario)
+        .then(() => {
+          this.$store.dispatch("getUsuario")
+          this.$router.push({ name: "usuario" })
+        })
+        .catch((error) => {
+          console.log(error.response)
+        })
+    },
+  },
+}
 </script>
 
 <style>

@@ -1,15 +1,62 @@
 {
+  "transacao": [
+    {
+      "comprador_id": "rafaelst2000@gmail.com",
+      "vendedor_id": "rafaelst2000@gmail.com",
+      "produto": {
+        "id": "teclado",
+        "nome": "Teclado",
+        "usuario_id": "rafaelst2000@gmail.com",
+        "preco": "200",
+        "vendido": "false",
+        "descricao": "Esse é um novo Teclado",
+        "fotos": []
+      },
+      "endereco": {
+        "cep": "123456789",
+        "rua": "Rua da Concha",
+        "numero": "150",
+        "bairro": "Ali Perto",
+        "cidade": "São Jerônimo",
+        "estado": "RS"
+      },
+      "id": 1
+    },
+    {
+      "comprador_id": "teste@gmail.com",
+      "vendedor_id": "rafaelst2000@gmail.com",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "rafaelst2000@gmail.com",
+        "preco": "1599",
+        "vendido": "false",
+        "descricao": "Esse é um novo Smartphone",
+        "fotos": []
+      },
+      "endereco": {
+        "cep": "22020001",
+        "rua": "Avenida Nossa Senhora de Copacabana",
+        "numero": "99",
+        "bairro": "Copacabana",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "id": 2
+    }
+  ],
   "usuario": [
     {
       "id": "rafaelst2000@gmail.com",
-      "email": "rafaelst2000@gmail.com",
       "nome": "Rafael Trevisan",
+      "email": "rafaelst2000@gmail.com",
       "senha": "123",
-      "rua": "Rua da Concha",
       "cep": "123456789",
-      "numero": "654",
-      "estado": "RS",
-      "cidade": "São Jerônimo"
+      "rua": "Rua da Concha",
+      "numero": "150",
+      "bairro": "Ali Perto",
+      "cidade": "São Jerônimo",
+      "estado": "RS"
     },
     {
       "id": "rafaelst2@gmail.com",
@@ -45,28 +92,22 @@
       "bairro": "Taquarí",
       "cidade": "Rio Branco",
       "estado": "AC"
+    },
+    {
+      "id": "teste@gmail.com",
+      "nome": "André Rafael",
+      "email": "teste@gmail.com",
+      "senha": "123",
+      "cep": "22020001",
+      "rua": "Avenida Nossa Senhora de Copacabana",
+      "numero": "99",
+      "bairro": "Copacabana",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
     }
   ],
   "produto": [
     {
-      "id": "notebook",
-      "nome": "Notebook",
-      "usuario_id": "rafaelst2000@gmail.com",
-      "preco": "4999",
-      "vendido": "false",
-      "descricao": "Esse é um novo notebook",
-      "fotos": []
-    },
-    {
-      "id": "smartphone",
-      "nome": "Smartphone",
-      "usuario_id": "rafaelst2000@gmail.com",
-      "preco": "1599",
-      "vendido": "false",
-      "descricao": "Esse é um novo Smartphone",
-      "fotos": []
-    },
-    {
       "id": "teclado",
       "nome": "Teclado",
       "usuario_id": "rafaelst2000@gmail.com",
@@ -427,31 +468,20 @@
       "fotos": []
     },
     {
-      "id": "notebook",
-      "nome": "Notebook",
+      "nome": "Tablet",
+      "preco": "345",
+      "descricao": "Esse é um tablet novo",
+      "fotos": null,
       "usuario_id": "rafaelst2000@gmail.com",
-      "preco": "4999",
-      "vendido": "false",
-      "descricao": "Esse é um novo notebook",
-      "fotos": []
+      "id": "6J9GgZL"
     },
     {
-      "id": "smartphone",
-      "nome": "Smartphone",
+      "nome": "asdas",
+      "preco": "1223",
+      "descricao": "asdas",
+      "fotos": null,
       "usuario_id": "rafaelst2000@gmail.com",
-      "preco": "1599",
-      "vendido": "false",
-      "descricao": "Esse é um novo Smartphone",
-      "fotos": []
-    },
-    {
-      "id": "teclado",
-      "nome": "Teclado",
-      "usuario_id": "rafaelst2000@gmail.com",
-      "preco": "200",
-      "vendido": "false",
-      "descricao": "Esse é um novo Teclado",
-      "fotos": []
+      "id": "reY-4Jr"
     }
   ]
 }
