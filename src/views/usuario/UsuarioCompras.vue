@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     getCompras() {
-      api.get(`/transacao?comprador_id=${this.usuario.id}`).then((res) => {
+      api.get(`/transacao?tipo=comprador_id`).then((res) => {
         this.compras = res.data
       })
     },
@@ -49,9 +49,11 @@ export default {
 .produto-wrapper {
   margin-bottom: 40px;
 }
+
 .vendedor span {
   color: #e80;
 }
+
 h2 {
   margin-bottom: 20px;
 }

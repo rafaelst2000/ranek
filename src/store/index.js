@@ -4,9 +4,6 @@ import Vuex from 'vuex'
 import { api } from '@/services/services.js'
 
 Vue.use(Vuex)
-
-
-
 export default new Vuex.Store({
   strict: true,
   state: {
@@ -48,8 +45,8 @@ export default new Vuex.Store({
         context.commit("UPDATE_USUARIO_PRODUTOS", res.data)
       })
     },
-    getUsuario(context, payload) {
-      return api.get(`/usuario/${payload}`).then(r => {
+    getUsuario(context) {
+      return api.get(`/usuario`).then(r => {
         context.commit("UPDATE_USUARIO", r.data)
         context.commit("UPDATE_LOGIN", true)
       })
@@ -58,6 +55,15 @@ export default new Vuex.Store({
     criarUsuario(context, payload) {
       context.commit("UPDATE_USUARIO", { id: payload.email })
       return api.post(`/usuario`, payload)
+    },
+
+    logarUsuario(context, payload) {
+      return api.login({
+        username: payload.email,
+        password: payload.senha
+      }).then(response => {
+        window.localStorage.token = `Bearer ${response.data.token}`
+      })
     },
 
     deslogarUsuario(context) {
@@ -73,6 +79,7 @@ export default new Vuex.Store({
         cidade: '',
         estado: ''
       })
+      window.localStorage.removeItem("token")
       context.commit("UPDATE_LOGIN", false)
     }
   },

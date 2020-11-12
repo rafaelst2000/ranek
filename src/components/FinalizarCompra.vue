@@ -1,6 +1,7 @@
 <template>
   <section>
     <h2>Endereço de Envio</h2>
+    <ErroNotificacao :erros="erros" />
     <UsuarioForm>
       <button class="btn" @click.prevent="finalizarCompra">Finalizar Compra</button>
     </UsuarioForm>
@@ -16,6 +17,11 @@ export default {
     UsuarioForm,
   },
   props: ["produto"],
+  data() {
+    return {
+      erros: [],
+    }
+  },
   computed: {
     ...mapState(["usuario"]),
     compra() {
@@ -43,13 +49,15 @@ export default {
     async criarUsuario() {
       try {
         await this.$store.dispatch("criarUsuario", this.$store.state.usuario)
-        await this.$store.dispatch("getUsuario", this.$store.state.usuario.email)
+        await this.$store.dispatch("logarUsuario", this.$store.state.usuario)
+        await this.$store.dispatch("getUsuario")
         await this.criarTransacao()
       } catch (error) {
-        console.log(error)
+        this.erros.push(error.response.data.message)
       }
     },
     finalizarCompra() {
+      this.erros = []
       if (this.$store.state.login) {
         this.criarTransacao()
       } else {
@@ -63,7 +71,7 @@ export default {
 <style scoped>
 h2 {
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .btn {

@@ -8,6 +8,7 @@
       <label for="senha">Senha</label>
       <input type="password" name="senha" id="senha" v-model="login.senha" />
       <button class="btn" @click.prevent="logar">Logar</button>
+      <ErroNotificacao :erros="erros" />
     </form>
     <p class="perdeu">
       <a href="/" target="_blank">Esqueceu sua senha?</a>
@@ -28,29 +29,40 @@ export default {
         email: "",
         senha: "",
       },
+      erros: [],
     }
   },
   methods: {
     logar() {
-      this.$store.dispatch("getUsuario", this.login.email)
-      this.$router.push({ name: "usuario" })
+      this.erros = []
+      this.$store
+        .dispatch("logarUsuario", this.login)
+        .then(() => {
+          this.$store.dispatch("getUsuario")
+          this.$router.push({ name: "usuario" })
+        })
+        .catch((error) => {
+          this.erros.push(error.response.data.message)
+        })
     },
   },
 }
 </script>
 
 <style scoped>
+.login {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 h1 {
   text-align: center;
   font-size: 2rem;
   margin-top: 40px;
   color: #87f;
 }
-.login {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+
 form {
   display: grid;
 }
@@ -64,7 +76,7 @@ form {
 
 .perdeu {
   text-align: center;
-  margin: 20px auto 0;
+  margin: 20px auto 0 auto;
 }
 
 .perdeu a:hover {

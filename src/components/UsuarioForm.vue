@@ -66,8 +66,8 @@ export default {
 </script>
 
 <style scoped>
-.usuario,
-form {
+form,
+.usuario {
   display: grid;
   grid-template-columns: 80px 1fr;
   align-items: center;

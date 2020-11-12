@@ -4,63 +4,52 @@
       <div v-if="produtos && produtos.length" class="produtos" key="produtos">
         <div class="produto" v-for="(produto, index) in produtos" :key="index">
           <router-link :to="{ name: 'produto', params: { id: produto.id } }">
-            <img
-              v-if="produto.fotos.length > 0"
-              :src="produto.fotos[0].src"
-              :alt="produto.fotos[0].titulo"
-            />
-            <p class="preco">{{ produto.preco }}</p>
+            <img v-if="produto.fotos" :src="produto.fotos[0].src" :alt="produto.fotos[0].titulo" />
+            <p class="preco">{{ produto.preco | numeroPreco }}</p>
             <h2 class="titulo">{{ produto.nome }}</h2>
-            <p class="descricao">{{ produto.descricao }}</p>
+            <p>{{ produto.descricao }}</p>
           </router-link>
         </div>
-        <ProdutosPaginar
-          :produtosTotal="produtosTotal"
-          :produtosPorPagina="produtosPorPagina"
-        />
+        <ProdutosPaginar :produtosTotal="produtosTotal" :produtosPorPagina="produtosPorPagina" />
       </div>
-      <div key="semresultados" v-else-if="produtos && produtos.length === 0">
-        <p class="sem-resultados">
-          Busca sem resultados. Tente buscar outro termo
-        </p>
+      <div v-else-if="produtos && produtos.length === 0" key="sem-resultados">
+        <p class="sem-resultados">Busca sem resultados. Tente buscar outro termo.</p>
       </div>
-
-      <PaginaCarregando v-else key="carregando" />
+      <PaginaCarregando key="carregando" v-else />
     </transition>
   </section>
 </template>
 
 <script>
+import ProdutosPaginar from "@/components/Produtos/ProdutosPaginar.vue"
 import { api } from "@/services/services.js"
 import { serialize } from "@/utils.js"
-import ProdutosPaginar from "./ProdutosPaginar"
+
 export default {
+  name: "ProdutosLista",
   components: {
     ProdutosPaginar,
   },
   data() {
     return {
-      produtos: [],
+      produtos: null,
       produtosPorPagina: 9,
       produtosTotal: 0,
     }
   },
-  created() {
-    this.getProdutos()
-  },
   computed: {
     url() {
       const query = serialize(this.$route.query)
-      return `/produto?_limit=${this.produtosPorPagina}"${query}`
+      return `/produto?_limit=${this.produtosPorPagina}${query}`
     },
   },
   methods: {
     getProdutos() {
       this.produtos = null
-      setTimeout(() => {
-        api.get(this.url).then((r) => {
-          this.produtosTotal = Number(r.headers["x-total-count"])
-          this.produtos = r.data
+      window.setTimeout(() => {
+        api.get(this.url).then((response) => {
+          this.produtosTotal = Number(response.headers["x-total-count"])
+          this.produtos = response.data
         })
       }, 1500)
     },
@@ -70,6 +59,9 @@ export default {
       this.getProdutos()
     },
   },
+  created() {
+    this.getProdutos()
+  },
 }
 </script>
 
@@ -78,6 +70,7 @@ export default {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .produtos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,10 +78,18 @@ export default {
   margin: 30px;
 }
 
+@media screen and (max-width: 500px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+  }
+}
+
 .produto {
   box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
   padding: 10px;
-  background: white;
+  background: #fff;
   border-radius: 4px;
   transition: all 0.2s;
 }
@@ -110,8 +111,8 @@ export default {
 }
 
 .preco {
-  font-weight: bold;
   color: #e80;
+  font-weight: bold;
 }
 
 .sem-resultados {

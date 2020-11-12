@@ -1,19 +1,7 @@
 <template>
   <form>
-    <input
-      name="busca"
-      id="busca"
-      v-model="busca"
-      type="text"
-      placeholder="Buscar..."
-    />
-
-    <input
-      type="submit"
-      id="lupa"
-      value="Buscar"
-      @click.prevent="buscarProdutos"
-    />
+    <input name="busca" id="busca" v-model="busca" type="text" placeholder="Buscar..." />
+    <input type="submit" id="lupa" value="Buscar" @click.prevent="buscarProdutos" />
   </form>
 </template>
 
@@ -38,6 +26,7 @@ form {
   max-width: 600px;
   margin: 30px auto 60px auto;
   position: relative;
+  padding: 0 10px;
 }
 
 #busca {

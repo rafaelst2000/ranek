@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     getVendas() {
-      api.get(`/transacao?vendedor_id=${this.usuario.id}`).then((res) => {
+      api.get(`/transacao?tipo=vendedor_id`).then((res) => {
         this.vendas = res.data
       })
     },
@@ -55,11 +55,9 @@ export default {
 .produto-wrapper {
   margin-bottom: 40px;
 }
+
 .vendedor span {
   color: #e80;
-}
-h2 {
-  margin-bottom: 20px;
 }
 
 .entrega {
@@ -69,8 +67,22 @@ h2 {
   margin-bottom: 60px;
 }
 
+h2 {
+  margin-bottom: 20px;
+}
+
 h3 {
-  margin: 0;
+  margin: 0px;
   justify-self: end;
+}
+
+@media screen and (max-width: 500px) {
+  .entrega {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  h3 {
+    justify-self: start;
+  }
 }
 </style>

@@ -68,7 +68,7 @@ export default {
 .sidenav a:hover,
 .sidenav button:hover {
   background: #87f;
-  color: white;
+  color: #fff;
 }
 
 .sidenav button {

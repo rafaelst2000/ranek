@@ -59,11 +59,13 @@ export default {
 h2 {
   margin-bottom: 20px;
 }
+
 .list-enter,
 .list-leave-to {
   opacity: 0;
   transform: translate3d(20px, 0, 0);
 }
+
 .list-enter-active,
 .list-leave-active {
   transition: all 0.3s;
@@ -71,8 +73,8 @@ h2 {
 
 .deletar {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   background: url("../../assets/remove.svg") no-repeat center center;
   width: 24px;
   height: 24px;
