@@ -34,7 +34,6 @@ export default {
     formatarProduto() {
       const form = new FormData()
       const files = this.$refs.fotos.files
-      console.log(files)
       for (let i = 0; i < files.length; i++) {
         form.append(files[i].name, files[i])
       }
@@ -46,11 +45,16 @@ export default {
       form.append("usuario_id", this.$store.state.usuario.id)
       return form
     },
-    adicionarProduto() {
+    async adicionarProduto(event) {
       const produto = this.formatarProduto()
-      api.post("/produto", produto).then(() => {
-        this.$store.dispatch("getUsuarioProdutos")
-      })
+      const botao = event.currentTarget
+      botao.value = "Adicionando..."
+      botao.setAttribute("disabled", "")
+
+      await api.post("/produto", produto)
+      await this.$store.dispatch("getUsuarioProdutos")
+      botao.value = "Adicionar Produto"
+      botao.removeAttribute("disabled")
     },
   },
 }

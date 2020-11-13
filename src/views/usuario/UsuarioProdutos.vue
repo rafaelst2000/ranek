@@ -32,14 +32,9 @@ export default {
     deletarProduto(id) {
       const confirmar = window.confirm("Deseja remover este produto?")
       if (confirmar)
-        api
-          .delete(`/produto/${id}`)
-          .then(() => {
-            this.getUsuarioProdutos()
-          })
-          .catch((error) => {
-            console.log(error.response)
-          })
+        api.delete(`/produto/${id}`).then(() => {
+          this.getUsuarioProdutos()
+        })
     },
   },
   watch: {
