@@ -14,6 +14,9 @@ export default {
     ProdutosBuscar,
     ProdutosLista,
   },
+  created() {
+    document.title = "Ranek"
+  },
 }
 </script>
 

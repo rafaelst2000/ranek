@@ -19,6 +19,9 @@ export default {
       erros: [],
     }
   },
+  created() {
+    document.title = "Usuário | Editar"
+  },
   methods: {
     atualizarUsuario() {
       this.erros = []

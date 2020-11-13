@@ -45,6 +45,7 @@ export default {
   created() {
     if (this.login) {
       this.getUsuarioProdutos()
+      document.title = "Usuário | Produtos"
     }
   },
 }

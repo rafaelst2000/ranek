@@ -22,6 +22,7 @@ export default {
       compras: null,
     }
   },
+
   components: {
     ProdutoItem,
   },
@@ -37,6 +38,7 @@ export default {
   },
   created() {
     if (this.login) this.getCompras()
+    document.title = "Usuário | Compras"
   },
   watch: {
     login() {
