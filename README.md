@@ -31,7 +31,7 @@ A aplicação desenvolvida consiste em um webiste para compra e venda de diverso
 - **Vuex**;
 - **JSON Sever (inicialmente)**;
 - **API feita em Wordpress**;
-- **PI Via CEP para preenchimento de CEP**;
+- **API Via CEP para preenchimento de CEP**;
 - **Axios**
 
 [font_roboto]: https://fonts.google.com/specimen/Roboto
