@@ -4,7 +4,10 @@
       <h2>Compras</h2>
       <div class="produtos-wrapper" v-for="(compra, index) in compras" :key="index">
         <ProdutoItem v-if="compra.produto" :produto="compra.produto">
-          <p class="vendedor"><span>Vendedor: </span> {{ compra.vendedor_id }}</p>
+          <p class="vendedor">
+            <span>Vendedor:</span>
+            {{ compra.vendedor_id }}
+          </p>
         </ProdutoItem>
       </div>
     </div>
@@ -13,18 +16,18 @@
 </template>
 
 <script>
-import { api } from "@/services/services.js"
 import ProdutoItem from "@/components/Produtos/ProdutoItem.vue"
+import { api } from "@/services/services.js"
 import { mapState } from "vuex"
+
 export default {
+  components: {
+    ProdutoItem,
+  },
   data() {
     return {
       compras: null,
     }
-  },
-
-  components: {
-    ProdutoItem,
   },
   computed: {
     ...mapState(["usuario", "login"]),
@@ -36,14 +39,16 @@ export default {
       })
     },
   },
-  created() {
-    if (this.login) this.getCompras()
-    document.title = "Usuário | Compras"
-  },
   watch: {
     login() {
       this.getCompras()
     },
+  },
+  created() {
+    if (this.login) {
+      this.getCompras()
+    }
+    document.title = "Usuário | Compras"
   },
 }
 </script>
