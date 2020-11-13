@@ -24,8 +24,11 @@ export default {
     }
   },
   methods: {
-    async criarUsuario() {
+    async criarUsuario(event) {
       this.erros = []
+      const botao = event.currentTarget
+      botao.value = "Criando..."
+      botao.setAttribute("disabled", "")
       try {
         await this.$store.dispatch("criarUsuario", this.$store.state.usuario)
         await this.$store.dispatch("logarUsuario", this.$store.state.usuario)
@@ -33,6 +36,8 @@ export default {
         this.$router.push({ name: "usuario" })
       } catch (error) {
         this.erros.push(error.response.data.message)
+        botao.value = "Criar usuário"
+        botao.setAttribute("disabled", "")
       }
     },
   },
